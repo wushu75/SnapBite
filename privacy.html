@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SnapBite — Privacy Policy</title>
+<meta name="description" content="SnapBite privacy policy: no accounts, no servers, no telemetry. Your data stays on your device." />
+<meta name="robots" content="index, follow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{--ink:#081410;--emerald:#10b981;--mint:#34d399;--paper:#f6faf8;--slate:#4b5a53;--line:rgba(9,30,22,.1)}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:#0d1f18;font-family:"Inter",system-ui,sans-serif;line-height:1.65}
+  a{color:#0a6b4d}
+  .top{background:radial-gradient(120% 130% at 85% 10%,#0c2c22,var(--ink));color:#eafaf3;padding:44px 0 40px}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px}
+  .brand{display:flex;align-items:center;gap:11px}
+  .brand svg{width:30px;height:30px} .brand b{font-family:"Bricolage Grotesque";font-weight:700;font-size:19px}
+  h1{font-family:"Bricolage Grotesque";font-weight:800;letter-spacing:-.02em;font-size:clamp(30px,5vw,42px);margin:26px 0 8px}
+  .updated{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--mint);letter-spacing:.04em}
+  main{padding:44px 0 72px}
+  h2{font-family:"Bricolage Grotesque";font-weight:700;font-size:22px;margin:34px 0 10px;letter-spacing:-.01em}
+  p{margin:12px 0}
+  ul{margin:12px 0;padding-left:20px} li{margin:7px 0}
+  .callout{background:#fff;border:1px solid var(--line);border-left:3px solid var(--emerald);border-radius:12px;padding:16px 18px;margin:20px 0}
+  .callout strong{color:#0a6b4d}
+  code{font-family:"JetBrains Mono",monospace;font-size:.9em;background:rgba(9,30,22,.06);padding:2px 6px;border-radius:5px}
+  footer{border-top:1px solid var(--line);padding:24px 0;color:var(--slate);font-size:14px}
+  .tl{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--slate)}
+</style>
+</head>
+<body>
+  <div class="top"><div class="wrap">
+    <div class="brand">
+      <svg viewBox="0 0 100 100"><g fill="#10b981">
+        <path d="M50,35 L50,8 A42,42 0 0,1 86.37,29 L62.99,42.5 A15,15 0 0,0 50,35 Z"/>
+        <path d="M50,35 L50,8 A42,42 0 0,1 86.37,29 L62.99,42.5 A15,15 0 0,0 50,35 Z" transform="rotate(120 50 50)"/>
+        <path d="M50,35 L50,8 A42,42 0 0,1 86.37,29 L62.99,42.5 A15,15 0 0,0 50,35 Z" transform="rotate(240 50 50)"/>
+      </g></svg>
+      <b>SnapBite</b>
+    </div>
+    <h1>Privacy Policy</h1>
+    <div class="updated">Last updated: 13 August 2026</div>
+  </div></div>
+
+  <main class="wrap">
+    <div class="callout">
+      <strong>The short version:</strong> SnapBite has no servers, no accounts, and no analytics. It does not collect, transmit, or sell your data to us or anyone else. Everything you log stays on your device. The only time anything leaves your machine is when <em>you</em> ask SnapBite to analyze a meal — and then it goes straight to the AI provider whose key you entered, and nowhere else.
+    </div>
+
+    <h2>Who this covers</h2>
+    <p>This policy applies to the SnapBite browser extension ("SnapBite", "the extension"). SnapBite is free, open-source software. There is no company, backend service, or hosted account behind it.</p>
+
+    <h2>What SnapBite stores, and where</h2>
+    <p>All of the following is stored <strong>locally on your device</strong> using your browser's built-in storage (<code>chrome.storage.local</code> and IndexedDB). None of it is transmitted to the developer or any third party except as described below.</p>
+    <ul>
+      <li><strong>Your meal log</strong> — titles, calories, macros, notes, timestamps, and optional small image thumbnails you save.</li>
+      <li><strong>Your settings</strong> — chosen provider, model, units, daily goal, and theme.</li>
+      <li><strong>Your API key(s)</strong> — the key you paste for your chosen AI provider is stored locally so you don't have to re-enter it.</li>
+    </ul>
+
+    <h2>What is sent off your device, and to whom</h2>
+    <p>SnapBite only makes a network request when you actively trigger a meal analysis. At that moment, and only then, it sends the following <strong>directly to the AI provider you selected and configured</strong> (for example DeepSeek, Alibaba Qwen, SiliconFlow, OpenRouter, Google, OpenAI, Anthropic, xAI, or a custom/local endpoint you entered):</p>
+    <ul>
+      <li>The meal <strong>photo or text</strong> you are analyzing.</li>
+      <li>Your <strong>API key</strong> for that provider, used to authenticate the request.</li>
+    </ul>
+    <p>This request goes straight from your browser to that provider's API. It does <strong>not</strong> pass through any server operated by the SnapBite developer, because none exists. SnapBite never sends your data to any destination you did not configure.</p>
+    <div class="callout">
+      <strong>Third-party providers have their own policies.</strong> Once your meal data reaches the AI provider you chose, that provider's privacy policy and terms govern how they handle it. Please review the policy of whichever provider you use. If you prefer that <em>nothing</em> leaves your device at all, you can run a fully local model (for example via Ollama) and configure SnapBite to use it.
+    </div>
+
+    <h2>What SnapBite does NOT do</h2>
+    <ul>
+      <li>No analytics, tracking, telemetry, or usage reporting of any kind.</li>
+      <li>No advertising and no ad networks.</li>
+      <li>No selling, renting, or sharing of your data with data brokers or any third party.</li>
+      <li>No developer-operated servers, and no account or sign-in.</li>
+      <li>No use of your data for anything beyond the single purpose of estimating and logging the meals you ask it to.</li>
+    </ul>
+
+    <h2>Permissions</h2>
+    <ul>
+      <li><strong>Storage</strong> — to save your log, settings, and key locally on your device.</li>
+      <li><strong>Access to specific AI provider domains</strong> — so SnapBite can send your analysis request to the provider you chose.</li>
+      <li><strong>Optional access to a custom endpoint</strong> — only requested if you add your own OpenAI-compatible or self-hosted endpoint, and only granted when you approve the browser's permission prompt.</li>
+    </ul>
+
+    <h2>Data retention and deletion</h2>
+    <p>Because your data lives only on your device, you are always in control of it. You can edit or delete individual meals at any time, or clear everything from the extension's settings. Removing your keys or uninstalling the extension deletes SnapBite's locally stored data from your browser. SnapBite keeps no copy anywhere else.</p>
+
+    <h2>Children</h2>
+    <p>SnapBite is a general-purpose utility and is not directed at children. It collects no personal information for the developer from anyone.</p>
+
+    <h2>Limited Use</h2>
+    <p>SnapBite's use and handling of any user data complies with the Chrome Web Store User Data Policy, including the Limited Use requirements. User data is used solely to provide and improve the single user-facing purpose of the extension — estimating and logging the meals you choose to analyze — and is never transferred except as needed to fulfill that purpose at your direction.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes in a way that affects how your data is handled, the updated version will be posted here with a new "last updated" date, and — where the change is material — surfaced in the extension.</p>
+
+    <h2>Contact</h2>
+    <p>Questions or concerns? Open an issue at <a href="https://github.com/wushu75/SnapBite/issues">github.com/wushu75/SnapBite/issues</a>.</p>
+
+    <footer>
+      <div class="tl">SnapBite · MIT licensed · your data stays yours · not affiliated with any model provider</div>
+    </footer>
+  </main>
+</body>
+</html>
